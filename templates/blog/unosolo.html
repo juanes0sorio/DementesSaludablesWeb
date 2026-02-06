@@ -3,6 +3,10 @@
 
 {% block title %}{{ publicacion.titulo }}{% endblock %}
 
+{% block og_title %}{{ publicacion.titulo }}{% endblock %}
+{% block meta_description %}{{ publicacion.contenido|striptags|truncatechars:160 }}{% endblock %}
+{% block og_description %}{{ publicacion.contenido|striptags|truncatechars:160 }}{% endblock %}
+
 {% block content %}
 
 <style>
@@ -46,7 +50,8 @@
 
     {% if publicacion.imagen %}
     <div class="max-w-5xl mx-auto px-5 -mt-10">
-        <img src="{{ publicacion.imagen.url }}" alt="{{ publicacion.titulo }}" class="w-full h-[400px] md:h-[500px] object-cover rounded-[2.5rem] shadow-2xl border-4 border-white">
+        <img src="{{ publicacion.imagen.url }}" alt="{{ publicacion.titulo }}" 
+        class="w-full max-h-[500px] object-contain mx-auto rounded-[2.5rem] shadow-2xl border-4 border-white bg-white">
     </div>
     {% endif %}
 
@@ -75,4 +80,21 @@
 
     </div>
 </article>
+    
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "{{ publicacion.titulo|escapejs }}",
+  "image": "{{ request.scheme }}://{{ request.get_host }}{{ publicacion.imagen.url }}",
+  "author": {
+    "@type": "Person",
+    "name": "{{ publicacion.autor.get_full_name|default:publicacion.autor.username }}"
+  },
+  "datePublished": "{{ publicacion.creado|date:'c' }}",
+  "dateModified": "{{ publicacion.modificado|date:'c' }}"
+}
+</script>
+    
 {% endblock %}
+

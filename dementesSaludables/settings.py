@@ -43,7 +43,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'ckeditor',
     'core',
-    'blog'
+    'blog',
+    'django.contrib.sitemaps',
+    'django.contrib.sites',
+    'meta',
+    'robots'
 ]
 
 MIDDLEWARE = [
@@ -156,15 +160,21 @@ SECURE_BROWSER_XSS_FILTER = True
 SECURE_CONTENT_TYPE_NOSNIFF = True
 X_FRAME_OPTIONS = 'DENY'
 
+SITE_ID = 1
+
 if not DEBUG:
     CSRF_COOKIE_SECURE = True
     SESSION_COOKIE_SECURE = True
     SECURE_SSL_REDIRECT = True
     SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+    META_SITE_PROTOCOL = 'https'
+    META_SITE_DOMAIN = 'dementessaludables.com'
 else:
     CSRF_COOKIE_SECURE = False
     SESSION_COOKIE_SECURE = False
     SECURE_SSL_REDIRECT = False
+
+
 
 
 
