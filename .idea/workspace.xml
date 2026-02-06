@@ -5,23 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a64f0821-72a3-4429-bd1b-2b3e81b4d761" name="Changes" comment="MVP web page de Psicologia, tiene seccion de inicio y blog, falta por agregar la sesion sobre mi.">
-      <change afterPath="$PROJECT_DIR$/blog/sitemaps.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/0.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/1.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/2.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/3.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/4.webp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/img/yo.webp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dementesSaludables/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/dementesSaludables/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dementesSaludables/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/dementesSaludables/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/img/yo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/blog/todos.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/blog/todos.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/blog/unosolo.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/blog/unosolo.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/core/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/core/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/core/sobremi.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/core/sobremi.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/staticfiles/img/yo.webp" beforeDir="false" afterPath="$PROJECT_DIR$/staticfiles/img/yo.webp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -142,7 +126,7 @@
       <workItem from="1770086161819" duration="1205000" />
       <workItem from="1770128265186" duration="7592000" />
       <workItem from="1770163403274" duration="4000000" />
-      <workItem from="1770385442982" duration="2886000" />
+      <workItem from="1770385442982" duration="3231000" />
     </task>
     <task id="LOCAL-00001" summary="MVP web page de Psicologia, tiene seccion de inicio y blog, falta por agregar la sesion sobre mi.">
       <option name="closed" value="true" />
