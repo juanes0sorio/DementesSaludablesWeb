@@ -1,150 +1,170 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="es" class="scroll-smooth scroll-pt-20">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}{% endblock %}</title>
-    <meta name="description" content="{% block meta_description %}Portal dedicado al bienestar psicológico.{% endblock %}">
-    <meta property="og:title" content="{% block og_title %}{% endblock %}">
-    <meta property="og:description" content="{% block og_description %}{% endblock %}">
-    {% block extra_meta %}{% endblock %}
-    <link rel="icon" type="image/png" href="{% static 'img/logo.png' %}">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
-    <script src="https://cdn.tailwindcss.com"></script>
 
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Lato', 'sans-serif'],
-                        serif: ['Playfair Display', 'serif'],
-                    },
-                    colors: {
-                        brand: {
-                            50: '#F0F8FA', //fondo
-                            100: '#E0F1F5',
-                            500: '#008CB1', //botones
-                            600: '#007291', //hover botones
-                            700: '#005870', //titulos oscuros
-                            900: '#003543', //parrafos
-                        },
-                        nature: {
-                            50: '#F2FBF4', 
-                            100: '#DCF5E1',
-                            500: '#54B435',
-                            600: '#3D8C25',
-                        },
-                        sun: {
-                            400: '#FFCE29',
-                            500: '#EAB308',
-                        }
-                    },
-                    borderRadius: {
-                        '4xl': '2rem',
-                    }
-                }
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% block title %}{% endblock %}</title>
+  <meta name="description"
+    content="{% block meta_description %}Portal dedicado al bienestar psicológico.{% endblock %}">
+  <meta property="og:title" content="{% block og_title %}{% endblock %}">
+  <meta property="og:description" content="{% block og_description %}{% endblock %}">
+  <meta name="google-adsense-account" content="ca-pub-6577821177880170">
+  {% block extra_meta %}{% endblock %}
+  <link rel="icon" type="image/png" href="{% static 'img/logo.png' %}">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@500;700&display=swap"
+    rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Lato', 'sans-serif'],
+            serif: ['Playfair Display', 'serif'],
+          },
+          colors: {
+            brand: {
+              50: '#F0F8FA', //fondo
+              100: '#E0F1F5',
+              500: '#008CB1', //botones
+              600: '#007291', //hover botones
+              700: '#005870', //titulos oscuros
+              900: '#003543', //parrafos
+            },
+            nature: {
+              50: '#F2FBF4',
+              100: '#DCF5E1',
+              500: '#54B435',
+              600: '#3D8C25',
+            },
+            sun: {
+              400: '#FFCE29',
+              500: '#EAB308',
             }
+          },
+          borderRadius: {
+            '4xl': '2rem',
+          }
         }
-    </script>
+      }
+    }
+  </script>
 </head>
+
 <body class="bg-brand-50 text-brand-900 antialiased">
 
-    <header class="text-gray-600 body-font bg-white/90 backdrop-blur-sm shadow-sm sticky top-0 z-50 transition-all">
-      <div class="container mx-auto flex flex-wrap p-4 flex-col md:flex-row items-center">
-        
-        <nav class="flex lg:w-2/5 flex-wrap items-center text-base md:ml-auto font-medium">
-          <a href="{% url 'home' %}" class="mr-6 hover:text-brand-500 transition-colors cursor-pointer">Inicio</a>
-          <a href="{% url 'sobremi' %}" class="mr-6 hover:text-brand-500 transition-colors cursor-pointer">Sobre mí</a>
-          <a href="{% url 'blog_home' %}" class="mr-6 hover:text-brand-500 transition-colors cursor-pointer">Blog</a>
-        </nav>
-    
-        <a href="{% url 'home' %}" class="flex order-first lg:order-none lg:w-1/5 title-font font-medium items-center lg:items-center lg:justify-center mb-4 md:mb-0 group">
-          <img src="{% static 'img/logo.png' %}" alt="Dementes Saludables" class="h-16 w-auto object-contain transition-transform duration-300 group-hover:scale-110">
-          <div class="ml-4 flex flex-col items-start justify-center leading-none">
-            <span class="text-[1.2rem] font-serif font-bold text-brand-700 group-hover:text-brand-500 transition-colors">
-                Dementes
-            </span>
-            <span class="text-lg font-bold text-nature-600 tracking-[0.1em] uppercase mt-1">
-                Saludables
-            </span>
-          </div>
-        </a>
-    
-        <div class="lg:w-2/5 inline-flex lg:justify-end ml-5 lg:ml-0">
-          <button onclick="window.location.href='{% url 'admin:index' %}'" class="inline-flex items-center bg-brand-500 text-white border-0 py-2 px-6 focus:outline-none hover:bg-brand-600 rounded-full text-base mt-4 md:mt-0 shadow-lg shadow-brand-500/30 transition-all hover:-translate-y-0.5 font-bold">
-            Administrar
-            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-4 h-4 ml-2" viewBox="0 0 24 24">
-              <path d="M5 12h14M12 5l7 7-7 7"></path>
-            </svg>
-          </button>
+  <header class="text-gray-600 body-font bg-white/90 backdrop-blur-sm shadow-sm sticky top-0 z-50 transition-all">
+    <div class="container mx-auto flex flex-wrap p-4 flex-col md:flex-row items-center">
+
+      <nav class="flex lg:w-2/5 flex-wrap items-center text-base md:ml-auto font-medium">
+        <a href="{% url 'home' %}" class="mr-6 hover:text-brand-500 transition-colors cursor-pointer">Inicio</a>
+        <a href="{% url 'sobremi' %}" class="mr-6 hover:text-brand-500 transition-colors cursor-pointer">Sobre mí</a>
+        <a href="{% url 'blog_home' %}" class="mr-6 hover:text-brand-500 transition-colors cursor-pointer">Blog</a>
+      </nav>
+
+      <a href="{% url 'home' %}"
+        class="flex order-first lg:order-none lg:w-1/5 title-font font-medium items-center lg:items-center lg:justify-center mb-4 md:mb-0 group">
+        <img src="{% static 'img/logo.png' %}" alt="Dementes Saludables"
+          class="h-16 w-auto object-contain transition-transform duration-300 group-hover:scale-110">
+        <div class="ml-4 flex flex-col items-start justify-center leading-none">
+          <span class="text-[1.2rem] font-serif font-bold text-brand-700 group-hover:text-brand-500 transition-colors">
+            Dementes
+          </span>
+          <span class="text-lg font-bold text-nature-600 tracking-[0.1em] uppercase mt-1">
+            Saludables
+          </span>
         </div>
-    
+      </a>
+
+      <div class="lg:w-2/5 inline-flex lg:justify-end ml-5 lg:ml-0">
+        <button onclick="window.location.href='{% url 'admin:index' %}'"
+          class="inline-flex items-center bg-brand-500 text-white border-0 py-2 px-6 focus:outline-none hover:bg-brand-600 rounded-full text-base mt-4 md:mt-0 shadow-lg shadow-brand-500/30 transition-all hover:-translate-y-0.5 font-bold">
+          Administrar
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            class="w-4 h-4 ml-2" viewBox="0 0 24 24">
+            <path d="M5 12h14M12 5l7 7-7 7"></path>
+          </svg>
+        </button>
       </div>
-    </header>
-    
-    {% if messages %}
-      <div class="container mx-auto px-5 mt-4">
-        {% for message in messages %}
-          <div class="rounded-lg p-4 mb-4 text-sm font-bold flex items-center shadow-md
+
+    </div>
+  </header>
+
+  {% if messages %}
+  <div class="container mx-auto px-5 mt-4">
+    {% for message in messages %}
+    <div class="rounded-lg p-4 mb-4 text-sm font-bold flex items-center shadow-md
             {% if message.tags == 'success' %} bg-nature-100 text-nature-700 border border-nature-200
             {% elif message.tags == 'warning' %} bg-yellow-100 text-yellow-700 border border-yellow-200
             {% else %} bg-red-100 text-red-700 border border-red-200 {% endif %}">
-            
-            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-            
-            {{ message }}
-          </div>
-        {% endfor %}
-      </div>
-    {% endif %}
-    
-    <main>
-        {% block content %}
-        {% endblock %}
-    </main>
 
-    <footer class="body-font bg-brand-900 text-brand-50">
-      <div class="container px-5 py-12 mx-auto flex items-center sm:flex-row flex-col">
-        
-        <a href="{% url 'home' %}" class="flex title-font font-medium items-center md:justify-start justify-center text-white">
-          <img src="{% static 'img/logo.png' %}" alt="Logo Footer" class="h-10 w-auto object-contain brightness-110">
-          
-          <div class="ml-3 flex flex-col leading-none">
-            <span class="text-[1.2rem] font-serif font-bold text-white">Dementes</span>
-            <span class="text-lg font-bold text-nature-500 tracking-widest uppercase">Saludables</span>
-          </div>
+      <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+          d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+      </svg>
+
+      {{ message }}
+    </div>
+    {% endfor %}
+  </div>
+  {% endif %}
+
+  <main>
+    {% block content %}
+    {% endblock %}
+  </main>
+
+  <footer class="body-font bg-brand-900 text-brand-50">
+    <div class="container px-5 py-12 mx-auto flex items-center sm:flex-row flex-col">
+
+      <a href="{% url 'home' %}"
+        class="flex title-font font-medium items-center md:justify-start justify-center text-white">
+        <img src="{% static 'img/logo.png' %}" alt="Logo Footer" class="h-10 w-auto object-contain brightness-110">
+
+        <div class="ml-3 flex flex-col leading-none">
+          <span class="text-[1.2rem] font-serif font-bold text-white">Dementes</span>
+          <span class="text-lg font-bold text-nature-500 tracking-widest uppercase">Saludables</span>
+        </div>
+      </a>
+
+      <p class="text-sm text-brand-200 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-brand-700 sm:py-2 sm:mt-0 mt-4">
+        © {% now "Y" %} — Mentes Claras, Vidas en Equilibrio
+      </p>
+
+      <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start space-x-4">
+
+        <a href="#" class="text-brand-300 hover:text-white transition-colors">
+          <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5"
+            viewBox="0 0 24 24">
+            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+          </svg>
         </a>
-    
-        <p class="text-sm text-brand-200 sm:ml-4 sm:pl-4 sm:border-l-2 sm:border-brand-700 sm:py-2 sm:mt-0 mt-4">
-          © {% now "Y" %} — Mentes Claras, Vidas en Equilibrio
-        </p>
-    
-        <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start space-x-4">
-          
-          <a href="#" class="text-brand-300 hover:text-white transition-colors">
-            <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
-              <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
-            </svg>
-          </a>
-    
-          <a href="#" class="text-brand-300 hover:text-white transition-colors">
-            <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
-              <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
-            </svg>
-          </a>
-    
-          <a href="#" class="text-brand-300 hover:text-nature-400 transition-colors">
-            <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5" viewBox="0 0 24 24">
-              <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
-              <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
-            </svg>
-          </a>
-    
-        </span>
-      </div>
-    </footer>
+
+        <a href="#" class="text-brand-300 hover:text-white transition-colors">
+          <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5"
+            viewBox="0 0 24 24">
+            <path
+              d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+            </path>
+          </svg>
+        </a>
+
+        <a href="#" class="text-brand-300 hover:text-nature-400 transition-colors">
+          <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            class="w-5 h-5" viewBox="0 0 24 24">
+            <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
+            <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
+          </svg>
+        </a>
+
+      </span>
+    </div>
+  </footer>
 
 </body>
+
 </html>
