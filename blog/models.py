@@ -2,6 +2,8 @@ from django.db import models
 from django.contrib.auth.models import User
 from django.utils.text import slugify
 from ckeditor.fields import RichTextField
+from imagekit.models import ImageSpecField
+from imagekit.processors import ResizeToFit
 
 # Create your models here.
 class Categoria(models.Model):
@@ -30,6 +32,20 @@ class Publicacion(models.Model):
     creado = models.DateTimeField(auto_now_add=True, verbose_name="Fecha de creacion")
     modificado = models.DateTimeField(auto_now=True, verbose_name="Fecha de modificacion")
     estado = models.CharField(max_length=20, choices=ESTADO_CHOICES, verbose_name="Estado", default="borrador")
+
+    imagen_webp = ImageSpecField(
+        source='imagen',
+        processors=[],
+        format='WEBP',
+        options={'quality': 80}
+    )
+
+    imagen_thumb = ImageSpecField(
+        source='imagen',
+        processors=[ResizeToFit(400, 192)],
+        format='WEBP',
+        options={'quality': 80}
+    )
 
     class Meta:
         ordering = ['-creado']

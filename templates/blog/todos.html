@@ -28,24 +28,23 @@
                     {% for post in page_obj %}
                     <article
                         class="bg-white rounded-[2rem] overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-brand-100 flex flex-col h-full group">
-
-                        <div class="h-48 overflow-hidden relative">
+                        <div class="pt-[75%] w-full bg-gradient-to-br from-brand-50 to-brand-100 relative overflow-hidden rounded-t-[2rem]"> <!-- 4:3 padding box -->
                             {% if post.imagen %}
-                            <img src="{{ post.imagen.url }}" alt="{{ post.titulo }}"
-                                class="w-full h-full object-contain transition-transform duration-500 group-hover:scale-110">
+                            <img src="{{ post.imagen_webp.url }}" 
+                                 alt="{{ post.titulo }}"
+                                 class="absolute inset-0 w-full h-full object-contain transition-transform duration-500 group-hover:scale-110">
                             {% else %}
-                            <div class="w-full h-full bg-brand-100 flex items-center justify-center text-brand-300">
+                            <!-- your existing SVG placeholder -->
+                            <div class="w-24 h-24 bg-brand-100 rounded-xl flex items-center justify-center text-brand-300">
                                 <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z">
-                                    </path>
+                                    <!-- SVG content -->
                                 </svg>
                             </div>
                             {% endif %}
-
+                            
+                            <!-- category badge stays absolute positioned -->
                             {% if post.categorias.first %}
-                            <span
-                                class="absolute top-4 right-4 bg-white/90 backdrop-blur text-nature-600 text-xs font-bold px-3 py-1 rounded-full shadow-sm uppercase tracking-wider">
+                            <span class="absolute top-3 right-3 bg-white/95 backdrop-blur text-nature-600 text-xs font-bold px-3 py-1 rounded-full shadow-lg">
                                 {{ post.categorias.first.nombre }}
                             </span>
                             {% endif %}

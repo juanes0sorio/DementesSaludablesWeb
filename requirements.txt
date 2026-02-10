@@ -8,7 +8,9 @@ click==8.3.1
 colorama==0.4.6
 cookiecutter==2.6.0
 Django==6.0.1
+django-appconf==1.2.0
 django-ckeditor==6.7.3
+django-imagekit==6.0.0
 django-js-asset==3.1.2
 django-meta==2.5.0
 django-robots==6.1
@@ -19,6 +21,7 @@ markdown-it-py==4.0.0
 MarkupSafe==3.0.3
 mdurl==0.1.2
 packaging==26.0
+pilkit==3.0
 pillow==12.1.0
 psycopg2-binary==2.9.11
 Pygments==2.19.2

@@ -6,6 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="a64f0821-72a3-4429-bd1b-2b3e81b4d761" name="Changes" comment="MVP web page de Psicologia, tiene seccion de inicio y blog, falta por agregar la sesion sobre mi.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dementesSaludables/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/dementesSaludables/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/blog/todos.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/blog/todos.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/blog/unosolo.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/blog/unosolo.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,7 +133,9 @@
       <workItem from="1770163403274" duration="4000000" />
       <workItem from="1770385442982" duration="6803000" />
       <workItem from="1770406246605" duration="38000" />
-      <workItem from="1770586513125" duration="1312000" />
+      <workItem from="1770586513125" duration="2259000" />
+      <workItem from="1770664532622" duration="5000" />
+      <workItem from="1770687145312" duration="2250000" />
     </task>
     <task id="LOCAL-00001" summary="MVP web page de Psicologia, tiene seccion de inicio y blog, falta por agregar la sesion sobre mi.">
       <option name="closed" value="true" />

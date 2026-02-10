@@ -8,8 +8,8 @@ services:
       - .:/app
       - ./staticfiles:/app/staticfiles
       - ./media:/app/media
-    ports:
-      - "8002:8002"
+    networks:
+      - proxy-net
     env_file:
       - .env
     depends_on:
@@ -24,6 +24,12 @@ services:
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
     volumes:
       - postgres_data:/var/lib/postgresql/data/
+    networks:
+      - proxy-net
 
 volumes:
   postgres_data:
+
+networks:
+  -proxy-net:
+    external: True
