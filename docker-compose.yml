@@ -4,6 +4,7 @@ services:
   web:
     build: .
     command: gunicorn dementesSaludables.wsgi:application --bind 0.0.0.0:8002
+    restart: always
     volumes:
       - .:/app
       - ./staticfiles:/app/staticfiles
@@ -31,5 +32,5 @@ volumes:
   postgres_data:
 
 networks:
-  -proxy-net:
+  proxy-net:
     external: True

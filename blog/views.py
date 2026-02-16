@@ -9,11 +9,11 @@ def blog_home(request):
 
     publicaciones_list = Publicacion.objects.filter(estado='publicado')
 
-    categoria_id = request.GET.get('categoria_id')
+    categoria_id = request.GET.get('categoria')
     categoria_activa = None
     if categoria_id:
-        publicaciones_list = publicaciones_list.objects.filter(categorias__id=categoria_id)
-        categoria_activa = Categoria.objects.get(id=categoria_id)
+        publicaciones_list = publicaciones_list.filter(categorias__id=categoria_id)
+        categoria_activa = Categoria.objects.filter(id=categoria_id).first()
 
     paginator = Paginator(publicaciones_list, 9)
     page = request.GET.get('page')
