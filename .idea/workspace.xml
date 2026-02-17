@@ -6,10 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a64f0821-72a3-4429-bd1b-2b3e81b4d761" name="Changes" comment="MVP web page de Psicologia, tiene seccion de inicio y blog, falta por agregar la sesion sobre mi.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/blog/todos.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/blog/todos.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/blog/unosolo.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/blog/unosolo.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,7 +133,7 @@
       <workItem from="1770687145312" duration="2707000" />
       <workItem from="1770920946941" duration="140000" />
       <workItem from="1771079490364" duration="2231000" />
-      <workItem from="1771285219128" duration="621000" />
+      <workItem from="1771285219128" duration="1425000" />
     </task>
     <task id="LOCAL-00001" summary="MVP web page de Psicologia, tiene seccion de inicio y blog, falta por agregar la sesion sobre mi.">
       <option name="closed" value="true" />
