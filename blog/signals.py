@@ -10,17 +10,14 @@ from django.core import signing
 from .models import Publicacion
 from core.models import Suscriptor
 
+import threading
+
 
 def build_absolute_url(path: str) -> str:
     base = getattr(settings, "SITE_URL", "").rstrip("/")
     return f"{base}{path}" if base else path
 
-
-@receiver(post_save, sender=Publicacion)
-def notificacion_nuevo(sender, instance: Publicacion, created, **kwargs):
-    if instance.estado != "publicado" or instance.notificado:
-        return
-
+def enviar_correos(instance):
     emails = list(Suscriptor.objects.values_list("email", flat=True))
     if not emails:
         return
@@ -46,7 +43,7 @@ def notificacion_nuevo(sender, instance: Publicacion, created, **kwargs):
         text_content = strip_tags(html_content)
 
         msg = EmailMultiAlternatives(
-            subject= instance.titulo,
+            subject=instance.titulo,
             body=text_content,
             from_email=settings.DEFAULT_FROM_EMAIL,
             to=[email],
@@ -56,3 +53,13 @@ def notificacion_nuevo(sender, instance: Publicacion, created, **kwargs):
 
     Publicacion.objects.filter(pk=instance.pk).update(notificado=True)
 
+@receiver(post_save, sender=Publicacion)
+def notificacion_nuevo(sender, instance: Publicacion, created, **kwargs):
+    if instance.estado != "publicado":
+        return
+    if instance.notificado:
+        return
+
+    hilo = threading.Thread(target=enviar_correos, args=(instance,))
+    hilo.daemon = True
+    hilo.start()
