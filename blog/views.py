@@ -1,6 +1,10 @@
 from django.shortcuts import render, get_object_or_404
 from .models import Publicacion, Categoria
 from django.core.paginator import Paginator
+from django.conf import settings
+from django.core import signing
+from django.http import HttpResponse
+from core.models import Suscriptor
 
 # Create your views here.
 def blog_home(request):
@@ -31,4 +35,13 @@ def publicacion_detalle(request, slug):
     return  render(request, 'blog/unosolo.html', {
         'publicacion': publicacion
     })
+
+def newsletter_baja(request, token):
+    data = signing.loads(token, salt="newsletter-baja", max_age=60 * 60 * 24 * 30)
+    email = data["email"]
+
+    Suscriptor.objects.filter(email=email).delete()
+
+    return render(request, "blog/baja_ok.html", {"email": email})
+
 

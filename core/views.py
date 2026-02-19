@@ -23,3 +23,4 @@ def home(request):
 
 def sobremi(request):
     return render(request, 'core/sobremi.html')
+

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Nueva publicación – Dementes Saludables</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Nunito:wght@400;600;700&display=swap');
+    </style>
+  </head>
+  <body style="margin:0;padding:0;background:#0f1a12;font-family:'Nunito',Arial,sans-serif;color:#e8f5e9;">
+
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="padding:40px 16px;">
+      <tr>
+        <td align="center">
+
+          <!-- Card -->
+          <table role="presentation" width="600" cellpadding="0" cellspacing="0"
+                 style="max-width:600px;background:#1a2e1e;border-radius:28px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.6);border:1px solid #2d4a32;">
+
+            <!-- Header -->
+            <tr>
+              <td style="padding:36px 32px 28px;background:linear-gradient(135deg,#0d2b1a 0%,#1a4a2a 50%,#0a2040 100%);position:relative;">
+                <table role="presentation" width="100%" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td align="center" style="padding-bottom:16px;">
+                      <!-- Glow ring around logo -->
+                      <div style="display:inline-block;background:linear-gradient(135deg,#2B7FD4,#4CAF50,#8BC34A);border-radius:50%;padding:3px;">
+                        <div style="background:#1a2e1e;border-radius:50%;padding:4px;">
+                          <img src="https://i.ibb.co/Fq8gK3X0/logo.png" alt="Dementes Saludables" width="80"
+                               style="display:block;width:80px;height:auto;border-radius:50%;">
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td align="center">
+                      <div style="font-family:'Playfair Display',Georgia,serif;font-size:28px;font-weight:700;
+                                  background:linear-gradient(90deg,#4CAF50,#8BC34A,#2B7FD4);
+                                  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+                                  background-clip:text;line-height:1.2;letter-spacing:-0.5px;">
+                        Reflexiones que sanan
+                      </div>
+                      <div style="margin-top:8px;font-size:13px;color:#78a87e;letter-spacing:2px;text-transform:uppercase;font-weight:600;">
+                        ✦ Nuevo artículo publicado ✦
+                      </div>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+            <!-- Divider line -->
+            <tr>
+              <td style="height:3px;background:linear-gradient(90deg,#2B7FD4,#4CAF50,#8BC34A,#2B7FD4);"></td>
+            </tr>
+
+            <!-- Content -->
+            <tr>
+              <td style="padding:32px;">
+
+                <!-- Title -->
+                <div style="font-family:'Playfair Display',Georgia,serif;font-size:26px;font-weight:700;
+                            color:#c8e6c9;line-height:1.3;margin-bottom:16px;
+                            border-left:4px solid #4CAF50;padding-left:16px;">
+                  {{ titulo }}
+                </div>
+
+                <!-- Resumen -->
+                <div style="font-size:15px;line-height:1.8;color:#a5c8a8;margin-bottom:24px;">
+                  {{ resumen|safe }}
+                </div>
+
+                <!-- Button -->
+                <div style="text-align:left;">
+                  <a href="{{ url }}"
+                     style="display:inline-block;
+                            background:linear-gradient(135deg,#2B7FD4,#4CAF50);
+                            color:#ffffff;text-decoration:none;
+                            padding:14px 28px;border-radius:999px;
+                            font-weight:700;font-size:15px;
+                            letter-spacing:0.5px;
+                            box-shadow:0 4px 20px rgba(75,175,80,.35);">
+                    Leer reflexión &nbsp;→
+                  </a>
+                </div>
+
+              </td>
+            </tr>
+
+            <!-- Divider -->
+            <tr>
+              <td style="height:1px;background:linear-gradient(90deg,transparent,#2d4a32,transparent);"></td>
+            </tr>
+
+            <!-- Footer -->
+            <tr>
+              <td style="padding:20px 32px;background:#0f1a12;font-size:12px;color:#4a7050;line-height:1.8;text-align:center;">
+                Recibiste este correo porque estás suscrito al newsletter de <strong style="color:#78a87e;">Dementes Saludables</strong>.<br/>
+                ¿Ya no deseas recibir más correos?&nbsp;
+                <a href="{{ baja_url }}" style="color:#4CAF50;text-decoration:none;font-weight:700;">Darme de baja</a>
+              </td>
+            </tr>
+
+          </table>
+
+        </td>
+      </tr>
+    </table>
+
+  </body>
+</html>

@@ -43,12 +43,13 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'ckeditor',
     'core',
-    'blog',
     'django.contrib.sitemaps',
     'django.contrib.sites',
     'meta',
     'robots',
-    'imagekit'
+    'imagekit',
+    'blog.apps.BlogConfig',
+
 ]
 
 MIDDLEWARE = [
@@ -176,6 +177,17 @@ else:
     SECURE_SSL_REDIRECT = False
 
 
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+DEFAULT_FROM_EMAIL = os.getenv('DEFAULT_FROM_EMAIL')
+SITE_URL = "http://127.0.0.1:8000"
+
+EMAIL_HOST = os.getenv('EMAIL_HOST')
+EMAIL_PORT = int(os.getenv('EMAIL_PORT'))
+EMAIL_USE_SSL = True
+EMAIL_USE_TLS = False
+
+EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')
 
 
 

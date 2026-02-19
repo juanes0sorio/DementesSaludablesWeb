@@ -5,7 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a64f0821-72a3-4429-bd1b-2b3e81b4d761" name="Changes" comment="MVP web page de Psicologia, tiene seccion de inicio y blog, falta por agregar la sesion sobre mi.">
+      <change afterPath="$PROJECT_DIR$/blog/signals.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/blog/baja_ok.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/templates/emails/nuevo_post.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/apps.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/core/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/core/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dementesSaludables/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/dementesSaludables/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,9 +24,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Dockerfile" />
         <option value="Python Script" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -53,7 +62,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.pycharm.django.structure.promotion.once.per.project&quot;: &quot;true&quot;,
     &quot;django.template.preview.state&quot;: &quot;SHOW_EDITOR&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/envioEmails&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/Users/juane/PycharmProjects/dementesSaludables&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -133,7 +142,10 @@
       <workItem from="1770687145312" duration="2707000" />
       <workItem from="1770920946941" duration="140000" />
       <workItem from="1771079490364" duration="2231000" />
-      <workItem from="1771285219128" duration="1425000" />
+      <workItem from="1771285219128" duration="8150000" />
+      <workItem from="1771346001165" duration="11000" />
+      <workItem from="1771432553530" duration="634000" />
+      <workItem from="1771435890227" duration="1223000" />
     </task>
     <task id="LOCAL-00001" summary="MVP web page de Psicologia, tiene seccion de inicio y blog, falta por agregar la sesion sobre mi.">
       <option name="closed" value="true" />

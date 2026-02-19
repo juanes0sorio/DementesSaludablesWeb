@@ -33,6 +33,8 @@ class Publicacion(models.Model):
     modificado = models.DateTimeField(auto_now=True, verbose_name="Fecha de modificacion")
     estado = models.CharField(max_length=20, choices=ESTADO_CHOICES, verbose_name="Estado", default="borrador")
 
+    notificado = models.BooleanField(default=False, verbose_name="Notificado por correo")
+
     imagen_webp = ImageSpecField(
         source='imagen',
         processors=[],
