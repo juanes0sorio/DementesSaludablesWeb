@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a64f0821-72a3-4429-bd1b-2b3e81b4d761" name="Changes" comment="MVP web page de Psicologia, tiene seccion de inicio y blog, falta por agregar la sesion sobre mi.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/blog/signals.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/signals.py" afterDir="false" />
-    </list>
+    <list default="true" id="a64f0821-72a3-4429-bd1b-2b3e81b4d761" name="Changes" comment="MVP web page de Psicologia, tiene seccion de inicio y blog, falta por agregar la sesion sobre mi." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -138,7 +135,12 @@
       <workItem from="1771346001165" duration="11000" />
       <workItem from="1771432553530" duration="634000" />
       <workItem from="1771435890227" duration="1223000" />
-      <workItem from="1771460977857" duration="935000" />
+      <workItem from="1771460977857" duration="1674000" />
+      <workItem from="1771511275168" duration="6000" />
+      <workItem from="1771983467490" duration="3982000" />
+      <workItem from="1772131171700" duration="697000" />
+      <workItem from="1772208273581" duration="8000" />
+      <workItem from="1773161175087" duration="1764000" />
     </task>
     <task id="LOCAL-00001" summary="MVP web page de Psicologia, tiene seccion de inicio y blog, falta por agregar la sesion sobre mi.">
       <option name="closed" value="true" />

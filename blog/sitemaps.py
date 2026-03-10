@@ -11,4 +11,4 @@ class PublicacionSitemap(Sitemap):
         return obj.creado
 
     def location(self, obj):
-        return f'/blog/{obj.slug}/'
+        return f'/blog/publicacion/{obj.slug}/'

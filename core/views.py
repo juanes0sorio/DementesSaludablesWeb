@@ -24,3 +24,6 @@ def home(request):
 def sobremi(request):
     return render(request, 'core/sobremi.html')
 
+def politica_privacidad(request):
+    return render(request, 'core/politica_privacidad.html')
+
